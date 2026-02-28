@@ -78,7 +78,7 @@ sudo mkdir /mnt/boot
 sudo mount /dev/sda1 /mnt/boot
 
 # Descargar y extraer (desde GitHub Releases)
-wget https://github.com/TU-USUARIO/mexicodev-linux/releases/download/v0.1.0/mexicodev-0.1.0-x86_64.tar.xz
+wget https://github.com/inuyashamx/mexicodev/releases/download/v0.1.0/mexicodev-0.1.0-x86_64.tar.xz
 sudo tar xpf mexicodev-0.1.0-x86_64.tar.xz -C /mnt
 
 # Instalar GRUB
@@ -118,7 +118,7 @@ Mismo proceso que arriba pero:
 
 ```bash
 # Desde el Linux live, descarga y corre el instalador:
-wget https://raw.githubusercontent.com/TU-USUARIO/mexicodev-linux/main/install.sh
+wget https://raw.githubusercontent.com/inuyashamx/mexicodev/main/install.sh
 sudo bash install.sh /dev/sdX    # Reemplaza sdX con tu disco
 ```
 
@@ -150,7 +150,7 @@ Si quieres reconstruir MexicoDev desde cero:
 sudo apt install build-essential bison gawk m4 texinfo
 
 # Clonar el repo
-git clone https://github.com/TU-USUARIO/mexicodev-linux.git
+git clone https://github.com/inuyashamx/mexicodev.git
 cd mexicodev-linux
 
 # Ejecutar el build completo (~3 horas)
