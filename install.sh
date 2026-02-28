@@ -7,7 +7,7 @@ set -e
 RED='\033[0;31m'; GREEN='\033[0;32m'; BLUE='\033[0;34m'; NC='\033[0m'
 
 DISK="$1"
-RELEASE_URL="https://github.com/inuyashamx/mexicodev/releases/download/v0.1.0/mexicodev-0.1.0-x86_64.tar.xz"
+RELEASE_URL="https://github.com/inuyashamx/mexicodev/releases/download/0.1.0/mexicodev-0.1.0-x86_64.tar.xz"
 
 if [ -z "$DISK" ]; then
     echo -e "${RED}Usage: sudo bash install.sh /dev/sdX${NC}"

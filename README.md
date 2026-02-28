@@ -83,7 +83,7 @@ sudo mkdir /mnt/boot
 sudo mount /dev/sda1 /mnt/boot
 
 # Descargar y extraer (desde GitHub Releases)
-wget https://github.com/inuyashamx/mexicodev/releases/download/v0.1.0/mexicodev-0.1.0-x86_64.tar.xz
+wget https://github.com/inuyashamx/mexicodev/releases/download/0.1.0/mexicodev-0.1.0-x86_64.tar.xz
 sudo tar xpf mexicodev-0.1.0-x86_64.tar.xz -C /mnt
 
 # Instalar GRUB
