@@ -17,6 +17,8 @@ Una distribución Linux construida desde cero usando Linux From Scratch 12.2. Op
 | Componente | Versión |
 |---|---|
 | Kernel | Linux 6.10.5 |
+| Bootloader | GRUB 2.12 |
+| Init | SysVinit 3.10 |
 | Compilador | GCC 14.2.0 |
 | Libc | Glibc 2.40 |
 | Shell | Bash 5.2.32 |
@@ -24,7 +26,10 @@ Una distribución Linux construida desde cero usando Linux From Scratch 12.2. Op
 | SSL | OpenSSL 3.3.1 |
 | Python | 3.12.5 |
 | Perl | 5.40.0 |
+| Util-linux | 2.40.2 |
+| E2fsprogs | 1.47.1 |
 | Arquitectura | x86_64 |
+| Tamaño | ~216MB (comprimido) |
 
 ## Instalación
 
@@ -178,7 +183,8 @@ mexicodev-linux/
 │   ├── 05-chroot.sh      # Entrar al chroot
 │   ├── 06*.sh            # Build de paquetes del sistema
 │   ├── 07-system-config.sh
-│   └── 08-kernel.sh      # Compilación del kernel
+│   ├── 08-kernel.sh      # Compilación del kernel
+│   └── 09-package.sh     # Strip y empaquetado
 ├── install.sh            # Instalador automático
 └── README.md
 ```
