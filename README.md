@@ -29,7 +29,7 @@ Una distribución Linux construida desde cero usando Linux From Scratch 12.2. Op
 | Util-linux | 2.40.2 |
 | E2fsprogs | 1.47.1 |
 | Arquitectura | x86_64 |
-| Tamaño | ~216MB (comprimido) |
+| Tamaño | ~220MB (comprimido) |
 
 ## Instalación
 

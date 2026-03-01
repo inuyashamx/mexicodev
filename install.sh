@@ -76,6 +76,8 @@ sysfs              /sys    sysfs nosuid,noexec,nodev   0 0
 devpts             /dev/pts devpts gid=5,mode=620      0 0
 tmpfs              /run    tmpfs  defaults              0 0
 devtmpfs           /dev    devtmpfs mode=0755,nosuid    0 0
+tmpfs              /dev/shm tmpfs  defaults             0 0
+cgroup2            /sys/fs/cgroup cgroup2 defaults      0 0
 EOF
 
 echo -e "${GREEN}[5/5] Installing GRUB...${NC}"
@@ -96,7 +98,7 @@ else
         echo "You can use: grub-install --root-directory=/mnt $DISK"
     fi
 
-    # Create grub.cfg with UUIDs
+    # Create grub.cfg with device paths (UUID not supported without initramfs)
     mkdir -p /mnt/boot/grub
     cat > /mnt/boot/grub/grub.cfg << GRUBEOF
 set default=0
@@ -106,12 +108,12 @@ set menu_color_highlight=white/blue
 
 menuentry "MexicoDev Linux 0.1.0" {
     search --no-floppy --fs-uuid --set=root ${BOOT_UUID}
-    linux /vmlinuz-6.10.5-mexicodev root=UUID=${ROOT_UUID} ro quiet
+    linux /vmlinuz-6.10.5-mexicodev root=${DISK}2 ro quiet
 }
 
 menuentry "MexicoDev Linux 0.1.0 (Recovery)" {
     search --no-floppy --fs-uuid --set=root ${BOOT_UUID}
-    linux /vmlinuz-6.10.5-mexicodev root=UUID=${ROOT_UUID} ro single
+    linux /vmlinuz-6.10.5-mexicodev root=${DISK}2 ro single
 }
 GRUBEOF
 fi
