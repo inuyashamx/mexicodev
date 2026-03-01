@@ -105,13 +105,13 @@ set menu_color_normal=cyan/blue
 set menu_color_highlight=white/blue
 
 menuentry "MexicoDev Linux 0.1.0" {
-    search --no-floppy --fs-uuid --set=root ${ROOT_UUID}
-    linux /boot/vmlinuz-6.10.5-mexicodev root=UUID=${ROOT_UUID} ro quiet
+    search --no-floppy --fs-uuid --set=root ${BOOT_UUID}
+    linux /vmlinuz-6.10.5-mexicodev root=UUID=${ROOT_UUID} ro quiet
 }
 
 menuentry "MexicoDev Linux 0.1.0 (Recovery)" {
-    search --no-floppy --fs-uuid --set=root ${ROOT_UUID}
-    linux /boot/vmlinuz-6.10.5-mexicodev root=UUID=${ROOT_UUID} ro single
+    search --no-floppy --fs-uuid --set=root ${BOOT_UUID}
+    linux /vmlinuz-6.10.5-mexicodev root=UUID=${ROOT_UUID} ro single
 }
 GRUBEOF
 fi
